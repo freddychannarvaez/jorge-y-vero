@@ -3,8 +3,10 @@
 ---
 
 <section class="cover">
-  <span class="cover-letter">J</span>
-  <span class="cover-letter">V</span>
+  <div class="cover-letters">
+    <span>J</span>
+    <span>V</span>
+  </div>
   <div class="cover-title">
     <span>JORGE</span>
     <span>&</span>
@@ -14,16 +16,36 @@
 
 <style>
   .cover {
+    min-height: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
-    align-items: center;
+    /* align-items: stretch; */
     background-color: #f5f1e6;
     color: #af4c0f;
-    padding: 100px 50px;
-
-    .cover-letter {
+    padding: 50px;
+    /* padding: 100px 50px; */
+    box-sizing: border-box;
+    
+    .cover-letters {
+      /* height: 100%; */
+      height: 50vh;
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
       font-size: 86px;
+
+      span {
+        padding: 0 10px;
+
+        &:first-child {
+          border-right: 1px solid #af4c0f;
+        }
+        &:last-child {
+          align-self: center;
+          padding-bottom: 100px;
+        }
+      }
     }
 
     .cover-title {
@@ -32,6 +54,7 @@
       align-items: center;
       align-self: flex-end;
       font-size: 30px;
+      padding-bottom: 30px;
     }
   }
 </style>
