@@ -4,17 +4,21 @@
 
 <section class="additional-info">
   <img class="additional-image" src="additional.avif" alt="">
-  <span>Persona</span>
-  <span>Etiqueta formal</span>
-  <p>Tu presencia es lo más importante; pero si quieres hacernos un presente, puedes elegir alguna de estas opciones.</p>
-  <span>Mesa de Regalos </span>
-  <span>Liverpool Número de evento</span>
-  <span>51726410</span>
-  <span>Tarjeta BBVA</span>
-  <span>Silvia Verónica Ruelas Olvera</span>
-  <span>4152 3142 1550 8006</span>
-  <p>Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto
-  <span>Solo Adultos</span>
+  <div class="rules">
+    <span class="stylish">1 Persona</span>
+    <span class="stylish">Etiqueta formal</span>
+  </div>
+  <p class="presence">Tu presencia es lo más importante; pero si quieres hacernos un presente, puedes elegir alguna de estas opciones.</p>
+  <div class="gift">
+    <span class="stylish">Mesa de Regalos </span><br>
+    <span class="abhaya">Liverpool Número de evento<br>51726410</span>
+  </div>
+  <div class="gift">
+    <span class="stylish">Tarjeta BBVA</span><br>
+    <span class="abhaya">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
+  </div>
+  <p>Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
+  <span class="stylish">Solo Adultos</span>
 </section>
 
 <style>
@@ -24,12 +28,32 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    gap: 10px;
 
     .additional-image {
       width: 400px;
       max-width: 100%;
       height: auto;
       border: 1px solid gray;
+    }
+
+    .rules {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 14px;
+      gap: 10px;
+    }
+
+    .presence {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .gift {
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 </style>

@@ -3,18 +3,29 @@
 ---
 
 <section class="main-info">
-  <p class="handwritten">¡Nos casamos!</p>
-  <p>Nos encantaría compartir contigo este día tan especial</p>
+  <p class="handwritten title">¡Nos casamos!</p>
+  <p class="subtitle">Nos encantaría compartir contigo este día tan especial</p>
   <img class="main-image" src="main.avif" alt="">
-  <span>2025</span>
-  <span>SÁBADO | 01 | NOVIEMBRE</span>
-  <span>PARROQUIA</span>
-  <span>EL SEÑOR DE LA DIVINA MISERICORDIA</span>
-  <span>20:30 Hrs</span>
-  <span>Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.</span>
-  <span>HACIENDA EL TRIUNFO</span>
-  <span>21:30 Hrs</span>
-  <span>Periférico Norte Km 26.7, Mérida, Yuc.</span>
+  <div class="row">
+    <span class="year abhaya">2025</span>
+    <div class="date">
+      <span>SÁBADO</span>
+      <span class="day">01</span>
+      <span>NOVIEMBRE</span>
+    </div>
+  </div>
+  <div class="row gap">
+    <span class="abhaya church">
+      PARROQUIA<br>EL SEÑOR DE LA DIVINA MISERICORDIA
+    </span>
+    <span class="abhaya hour">20:30 Hrs</span>
+    <span class="abhaya address">Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.</span>
+  </div>
+  <div class="row gap">
+    <span class="abhaya church">HACIENDA "EL TRIUNFO"</span>
+    <span class="abhaya hour">21:30 Hrs</span>
+    <span class="abhaya address">Periférico Norte Km 26.7, Mérida, Yuc.</span>
+  </div>
 </section>
 
 <style>
@@ -23,8 +34,32 @@
     background-color: #f6f2e7;
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
     padding: 50px;
+
+    .title {
+      position: absolute;
+      left: 5%;
+      top: 20px;
+      margin: 0;
+    }
+
+    .subtitle {
+      padding: 0 20px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gap {
+      gap: 10px;
+    }
 
     .main-image {
       width: 400px;
@@ -33,13 +68,54 @@
       border: 1px solid gray;
     }
 
-    .handwritten {
-      font-family: 'Licorice';
+    .year {
       font-size: 26px;
-      position: absolute;
-      left: 5%;
-      top: 20px;
-      margin: 0;
+      font-weight: bold;
+    }
+    
+    .date {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: bold;
+
+      span {
+        min-width: 100px;
+      }
+
+      span:nth-child(1) {
+        padding-right: 5px;
+        border-right: 1px solid gray;
+        text-align: right;
+      }
+      span:nth-child(3) {
+        padding-left: 5px;
+        border-left: 1px solid gray;
+        text-align: left;
+      }
+      .day {
+        font-size: 36px;
+        min-width: unset;
+      }
+    }
+
+    .church {
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .hour {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .address {
+      font-size: 10px;
+      text-align: center;
     }
   }
 </style>
