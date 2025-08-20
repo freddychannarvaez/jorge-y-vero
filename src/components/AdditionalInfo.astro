@@ -5,20 +5,34 @@
 <section class="additional-info">
   <img class="additional-image" src="additional.avif" alt="">
   <div class="rules">
-    <span class="stylish">1 Persona</span>
-    <span class="stylish">Etiqueta formal</span>
+    <div class="icon-container">
+      <img class="icon" src="ticket.svg" alt="Icon">
+      <span class="stylish">1 Persona</span>
+    </div>
+    <div class="icon-container">
+      <img class="icon" src="hanger.svg" alt="Icon">
+      <span class="stylish">Etiqueta formal</span>
+    </div>
   </div>
-  <p class="presence">Tu presencia es lo más importante; pero si quieres hacernos un presente, puedes elegir alguna de estas opciones.</p>
+  <p class="presence ovo">Tu presencia es lo más importante; pero si quieres hacernos un presente, puedes elegir alguna de estas opciones.</p>
   <div class="gift">
-    <span class="stylish">Mesa de Regalos </span><br>
-    <span class="abhaya">Liverpool Número de evento<br>51726410</span>
+    <div class="icon-container">
+      <img class="icon" src="gift.svg" alt="Icon">
+      <span class="abhaya">MESA DE REGALOS</span>
+    </div>
+    <span class="ovo">Liverpool Número de evento<br>51726410</span>
+    <div class="gift">
+      <div class="icon-container">
+        <img class="icon" src="card.svg" alt="Icon">
+        <span class="abhaya">TARJETA BBVA</span>
+      </div>
+    <span class="ovo">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
   </div>
-  <div class="gift">
-    <span class="stylish">Tarjeta BBVA</span><br>
-    <span class="abhaya">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
+  <p class="ovo">Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
+  <div class="icon-container">
+    <img class="icon" src="cocktail.svg" alt="Icon">
+    <span class="abhaya">SOLO ADULTOS</span>
   </div>
-  <p>Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
-  <span class="stylish">Solo Adultos</span>
 </section>
 
 <style>
@@ -42,12 +56,25 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      font-size: 14px;
+      font-size: 18px;
       gap: 10px;
     }
 
+    .icon-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      /* justify-content: center; */
+      gap: 10px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
     .presence {
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
     }
 

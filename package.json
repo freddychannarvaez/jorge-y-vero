@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/abhaya-libre": "^5.2.6",
     "@fontsource/licorice": "^5.2.6",
+    "@fontsource/ovo": "^5.2.6",
     "@fontsource/stylish": "^5.2.7",
     "astro": "^5.12.8"
   }
