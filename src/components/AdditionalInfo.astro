@@ -20,44 +20,56 @@
       <img class="icon" src="gift.svg" alt="Icon">
       <span class="abhaya">MESA DE REGALOS</span>
     </div>
-    <span class="ovo">Liverpool Número de evento<br>51726410</span>
-    <div class="gift">
+    <a class="gift-link presence ovo" href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51726410"
+      target="_blank">Liverpool Número de evento: 51726410</a>
+  </div>
+  <div class="gift">
       <div class="icon-container">
         <img class="icon" src="card.svg" alt="Icon">
         <span class="abhaya">TARJETA BBVA</span>
       </div>
-    <span class="ovo">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
+    <span class="presence ovo">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
   </div>
-  <p class="ovo">Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
+  <p class="presence ovo">Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
   <div class="icon-container">
     <img class="icon" src="cocktail.svg" alt="Icon">
-    <span class="abhaya">SOLO ADULTOS</span>
+    <span class="only-adults abhaya">SOLO ADULTOS</span>
   </div>
 </section>
 
 <style>
   .additional-info {
+    --maxWidth: 500px;
     background-color: #f3d5c0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    justify-content: stretch;
+    padding: 30px 50px;
     gap: 10px;
 
+    @media (width < 790px) {
+      --maxWidth: 100%;
+    }
+
     .additional-image {
-      width: 400px;
+      width: var(--maxWidth);
       max-width: 100%;
       border: 1px solid gray;
       aspect-ratio: 3 / 2;
     }
 
     .rules {
-      width: 100%;
+      width: var(--maxWidth);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      font-size: 18px;
+      font-size: 28px;
       gap: 10px;
+
+      @media (width < 790px) {
+        font-size: 18px;
+      }
     }
 
     .icon-container {
@@ -74,13 +86,38 @@
     }
 
     .presence {
-      font-size: 14px;
+      width: var(--maxWidth);
+      font-size: 20px;
+      font-weight: normal;
       text-align: center;
+
+      @media (width < 790px) {
+        font-size: 14px;
+      }
     }
 
     .gift {
-      font-size: 14px;
+      width: var(--maxWidth);
+      font-size: 28px;
       font-weight: bold;
+
+      @media (width < 790px) {
+        font-size: 14px;
+      }
+    }
+
+    .only-adults {
+      font-size: 28px;
+      font-weight: bold;
+
+      @media (width < 790px) {
+        font-size: 16px;
+      }
+    }
+
+    .gift-link {
+      text-decoration: none;
+      color: inherit;
     }
   }
 </style>

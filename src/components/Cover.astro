@@ -16,14 +16,20 @@
 
 <style>
   .cover {
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     background-color: #f5f1e6;
     color: #af4c0f;
     padding: 50px;
     box-sizing: border-box;
+
+    @media (width < 790px) {
+      min-height: 400px;
+    }
     
     .cover-letters {
       height: 50vh;

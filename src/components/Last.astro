@@ -4,15 +4,17 @@
 
 <section class="last">
   <img class="last-image" src="last.avif" alt="" />
-  <div>
+  <div class="quote-container">
     <p class="last-quote ovo">“La vida no es la que uno vivió, sino la que uno recuerda y cómo la recuerda para contarla"</p>
     <p class="ovo">Gabriel García Márquez</p>
   </div>
   <span class="handwritten thanks">
-    Gracias por<br>acompañarnos
+    Gracias por acompañarnos
   </span>
 
-  <a class="confirm-button" href="https://wa.me/9991443055" target="_blank">Confirmar</a>
+  <div class="confirm-button">
+    <a href="https://wa.me/9901314593" target="_blank">Confirmar</a>
+  </div>
 
   <div class="demo">
     <div class="days">
@@ -49,6 +51,7 @@
 <style>
   .last {
     /* min-height: 900px; */
+    --content-size: 500px;
     background-color: #f6f2e7;
     display: flex;
     flex-direction: column;
@@ -56,6 +59,9 @@
     align-items: center;
     padding: 0 50px 50px 50px;
     position: relative;
+    @media (width < 790px) {
+      --content-size: 100%;
+      }
 
     .last-image {
       position: absolute;
@@ -63,24 +69,50 @@
       height: auto;
     }
 
+    .quote-container {
+      width: var(--content-size);
+    }
+
     .last-quote {
       margin-top: 70vw;
     }
 
     p {
-      font-size: 12px;
+      font-size: 24px;
       text-align: center;
+
+      @media (width < 790px) {
+        font-size: 12px;
+      }
     }
 
     .thanks {
-      font-size: 32px;
+      width: var(--content-size);
+      text-align: center;
+      font-size: 50px;
+      @media (width < 790px) {
+        font-size: 22px;
+      }
     }
 
     .confirm-button {
       background-color: #f4d6c1;
-      color: #af4c0f;
+      border-radius: 10px;
+      padding: 5px 10px;
+      
+      a {
+        text-decoration: none;
+        color: #af4c0f;
+        letter-spacing: 3px;
+        font-size: 28px;
+
+        @media (width < 790px) {
+          font-size: 16px;
+        }
+      }
     }
-     /* Contador */
+
+     /* TODO: Contador */
     .demo {
       position: absolute;
       top: 50vw;

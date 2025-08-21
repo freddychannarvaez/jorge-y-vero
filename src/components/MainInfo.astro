@@ -15,16 +15,16 @@
     </div>
   </div>
   <div class="row gap">
-    <span class="abhaya church">
+    <a class="abhaya church location-link" href="https://maps.app.goo.gl/dCXDSwD66Kt7D9x47" target="_blank">
       PARROQUIA<br>EL SEÑOR DE LA DIVINA MISERICORDIA
-    </span>
+    </a>
     <span class="abhaya hour">20:30 Hrs</span>
-    <span class="abhaya address">Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.</span>
+    <a class="abhaya address location-link" href="https://maps.app.goo.gl/dCXDSwD66Kt7D9x47" target="_blank">Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.</a>
   </div>
   <div class="row gap">
-    <span class="abhaya church">HACIENDA "EL TRIUNFO"</span>
+    <a class="abhaya church location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">HACIENDA "EL TRIUNFO"</a>
     <span class="abhaya hour">21:30 Hrs</span>
-    <span class="abhaya address">Periférico Norte Km 26.7, Mérida, Yuc.</span>
+    <a class="abhaya address location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">Periférico Norte Km 26.7, Mérida, Yuc.</a>
   </div>
 </section>
 
@@ -41,8 +41,14 @@
     .title {
       position: absolute;
       left: 5%;
-      top: 20px;
+      top: 0px;
       margin: 0;
+      font-size: 70px;
+      
+      @media (width < 790px) {
+        top: 20px;
+        font-size: 30px;
+      }
     }
 
     .subtitle {
@@ -50,6 +56,11 @@
       text-align: center;
       margin-bottom: 0;
       font-weight: 200;
+      font-size: 22px;
+      
+      @media (width < 790px) {
+        font-size: 16px;
+      }
     }
 
     .row {
@@ -64,15 +75,19 @@
     }
 
     .main-image {
-      width: 400px;
+      width: 500px;
       max-width: 90%;
       border: 1px solid gray;
       aspect-ratio: 3 / 2;
     }
 
     .year {
-      font-size: 26px;
       font-weight: bold;
+      font-size: 46px;
+      
+      @media (width < 790px) {
+        font-size: 26px;
+      }
     }
     
     .date {
@@ -81,19 +96,31 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-size: 18px;
+      font-size: 40px;
       font-weight: bold;
       letter-spacing: 3px;
 
-      
+      @media (width < 790px) {
+        font-size: 18px;
+      }
+
       span {
-        min-width: 128px;
+        min-width: 300px;
+
+        @media (width < 790px) {
+          min-width: 128px;
+        }
       }
 
       span:nth-child(1) {
-        padding-right: 10px;
+        padding-right: 20px;
         border-right: 1px solid gray;
         text-align: right;
+        letter-spacing: 7px;
+
+        @media (width < 790px) {
+          padding-right: 10px;
+        }
       }
       span:nth-child(3) {
         padding-left: 10px;
@@ -101,25 +128,42 @@
         text-align: left;
       }
       .day {
-        font-size: 36px;
+        font-size: 68px;
         min-width: unset;
+        @media (width < 790px) {
+          font-size: 36px;
+        }
       }
     }
 
     .church {
       text-align: center;
-      font-size: 12px;
+      font-size: 24px;
       font-weight: bold;
+      @media (width < 790px) {
+        font-size: 12px;
+      }
     }
 
     .hour {
-      font-size: 14px;
+      font-size: 28px;
       font-weight: bold;
+      @media (width < 790px) {
+        font-size: 14px;
+      }
     }
 
     .address {
-      font-size: 9px;
+      font-size: 18px;
       text-align: center;
+      @media (width < 790px) {
+        font-size: 9px;
+      }
+    }
+
+    .location-link {
+      text-decoration: none;
+      color: inherit;
     }
   }
 </style>
