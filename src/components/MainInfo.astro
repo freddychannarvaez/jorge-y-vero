@@ -26,11 +26,14 @@
     <span class="abhaya hour">21:30 Hrs</span>
     <a class="abhaya address location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">Periférico Norte Km 26.7, Mérida, Yuc.</a>
   </div>
+  <img class="flowers-1" src="flores rosas-02.svg">
+  <img class="flowers-2" src="flores rosas-02.svg">
 </section>
 
 <style>
   .main-info {
     position: relative;
+    overflow: hidden;
     background-color: #f6f2e7;
     display: flex;
     flex-direction: column;
@@ -79,6 +82,7 @@
       max-width: 90%;
       border: 1px solid gray;
       aspect-ratio: 3 / 2;
+      z-index: 2;
     }
 
     .year {
@@ -164,6 +168,22 @@
     .location-link {
       text-decoration: none;
       color: inherit;
+    }
+
+    .flowers-1 {
+      position: absolute;
+      width: 167px;
+      left: -91px;
+      top: 93px;
+      z-index: 1;
+    }
+    .flowers-2 {
+      position: absolute;
+      width: 167px;
+      right: -91px;
+      top: 93px;
+      z-index: 1;
+      transform: scaleX(-1);
     }
   }
 </style>

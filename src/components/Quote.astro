@@ -3,38 +3,73 @@
 ---
 
 <section class="quote">
-  <img class="quote-image" src="quote.avif" alt="Favicon">
+  <div class="img-container">
+    <img class="quote-image" src="quote.avif" alt="">
+  </div>
   <p class="ovo">
     "Y para estar total completa, absolutamente enamorado, hay que tener plena conciencia de que uno también es querido, que uno también inspira amor"
   </p>
   <p class="ovo">
     Mario Benedetti
   </p>
+  <img class="flowers-2" src="esquinas rosas y alcatraces-01.svg">
 </section>
 
 <style>
   .quote {
     --content-size: 500px;
+    position: relative;
+    overflow: hidden;
     background-color: #f4d6c1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 50px;
-
-    .quote-image {
+    
+    .img-container {
       width: var(--content-size);
       max-width: 80vw;
       aspect-ratio: 2 / 3;
+      z-index: 2;
+      overflow: hidden;
+
+      .quote-image {
+        position: relative;
+        width: 140%;
+        left: -72px;
+        bottom: 186px;
+      }
     }
 
     p {
       font-size: 24px;
       max-width: var(--content-size);
       text-align: center;
+      z-index: 2;
       
       @media (width < 790px) {
         font-size: 12px;
       }
+    }
+
+    .flowers-1 {
+      position: absolute;
+      top: 0;
+      left: -70px;
+      width: 300px;
+      height: auto;
+      rotate: 90deg;
+      z-index: 1;
+    }
+
+    .flowers-2 {
+      position: absolute;
+      bottom: -36px;
+      right: -32px;
+      width: 286px;
+      height: auto;
+      z-index: 1;
+      transform: scaleX(-1);
     }
   }
 </style>
