@@ -6,7 +6,7 @@
   <p class="handwritten title">¡Nos casamos!</p>
   <p class="subtitle ovo">Nos encantaría compartir contigo este día tan especial</p>
   <img class="main-image" src="main.avif" alt="">
-  <div class="row">
+  <div class="col">
     <span class="year abhaya">2025</span>
     <div class="date abhaya">
       <span>SÁBADO</span>
@@ -14,18 +14,41 @@
       <span>NOVIEMBRE</span>
     </div>
   </div>
-  <div class="row gap">
-    <a class="abhaya church location-link" href="https://maps.app.goo.gl/dCXDSwD66Kt7D9x47" target="_blank">
-      PARROQUIA<br>EL SEÑOR DE LA DIVINA MISERICORDIA
+  <div class="row">
+    <div class="icon-container">
+      <img src="church.svg">
+    </div>
+    <a class="col gap location-link" href="https://maps.app.goo.gl/dCXDSwD66Kt7D9x47" target="_blank">
+      <span class="abhaya church location-link">
+        PARROQUIA<br>EL SEÑOR DE LA DIVINA MISERICORDIA
+      </span>
+      <span class="abhaya hour">20:30 Hrs</span>
+      <div class="abhaya address">
+        <span>
+          Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.
+        </span>
+        <div class="location-container">
+          <img src="location.svg" alt="">
+        </div>
+      </div>
     </a>
-    <span class="abhaya hour">20:30 Hrs</span>
-    <a class="abhaya address location-link" href="https://maps.app.goo.gl/dCXDSwD66Kt7D9x47" target="_blank">Calle 41 Núm. 297 Col. San Ramón Norte, Mérida, Yuc.</a>
   </div>
-  <div class="row gap">
-    <a class="abhaya church location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">HACIENDA "EL TRIUNFO"</a>
-    <span class="abhaya hour">21:30 Hrs</span>
-    <a class="abhaya address location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">Periférico Norte Km 26.7, Mérida, Yuc.</a>
-  </div>
+  <div class="row">
+    <div class="icon-container">
+      <img src="cake.svg">
+    </div>
+    <a class="col gap location-link" href="https://maps.app.goo.gl/zPwcqy39GPQRhzMy7" target="_blank">
+      <span class="abhaya church location-link" >HACIENDA "EL TRIUNFO"</span>
+      <span class="abhaya hour">21:30 Hrs</span>
+      <div class="abhaya address">
+        <span>
+          Periférico Norte Km 26.7, Mérida, Yuc.</>
+        </span>
+        <div class="location-container">
+          <img src="location.svg" alt="">
+        </div>
+    </div>
+  </a>
   <img class="flowers-1" src="flores rosas-02.svg">
   <img class="flowers-2" src="flores rosas-02.svg">
 </section>
@@ -68,13 +91,55 @@
 
     .row {
       display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .col {
+      display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .gap {
-      gap: 10px;
+      gap: 5px;
       letter-spacing: 2px;
+      margin-top: 15px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .icon-container {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -20px;
+        left: -22px;
+      }
+    }
+
+    .location-container {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -7px;
+        left: -8px;
+      }
     }
 
     .main-image {
@@ -160,6 +225,10 @@
     .address {
       font-size: 18px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
       @media (width < 790px) {
         font-size: 9px;
       }

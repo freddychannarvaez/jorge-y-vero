@@ -5,19 +5,25 @@
 <section class="additional-info">
   <img class="additional-image" src="additional.avif" alt="">
   <div class="rules">
-    <div class="icon-container">
-      <img class="icon" src="ticket.svg" alt="Icon">
+    <div class="icon-subtitle">
+      <div class="ticket-container">
+        <img class="ticket" src="ticket.svg" alt="Icon">
+      </div>
       <span class="stylish">1 Persona</span>
     </div>
-    <div class="icon-container">
-      <img class="icon" src="hanger.svg" alt="Icon">
+    <div class="icon-subtitle">
+      <div class="hanger-container">
+        <img class="hanger" src="hanger.svg" alt="Icon">
+      </div>
       <span class="stylish">Etiqueta formal</span>
     </div>
   </div>
   <p class="presence ovo">Tu presencia es lo más importante; pero si quieres hacernos un presente, puedes elegir alguna de estas opciones.</p>
   <div class="gift">
-    <div class="icon-container">
-      <img class="icon" src="gift.svg" alt="Icon">
+    <div class="icon-subtitle">
+      <div class="gift-container">
+        <img class="gift" src="gift.svg" alt="Icon">
+      </div>
       <span class="abhaya">MESA DE REGALOS</span>
     </div>
     <span class="presence ovo">Liverpool Número de evento: 
@@ -25,15 +31,19 @@
     </span>
   </div>
   <div class="gift">
-      <div class="icon-container">
-        <img class="icon" src="card.svg" alt="Icon">
+      <div class="icon-subtitle">
+      <div class="card-container">
+        <img class="card" src="card.svg" alt="Icon">
+      </div>
         <span class="abhaya">TARJETA BBVA</span>
       </div>
     <span class="presence ovo">Silvia Verónica Ruelas Olvera<br>4152 3142 1550 8006</span>
   </div>
   <p class="presence ovo">Se solicita de manera respetuosa, este día quisiéramos compartirlo en un ambiente adulto</p>
-  <div class="icon-container">
-    <img class="icon" src="cocktail.svg" alt="Icon">
+  <div class="icon-subtitle">
+    <div class="cocktail-container">
+      <img class="cocktail" src="cocktail.svg" alt="Icon">
+    </div>
     <span class="only-adults abhaya">SOLO ADULTOS</span>
   </div>
   <img class="flowers" src="flores rosas-03.svg">
@@ -77,16 +87,85 @@
       }
     }
 
-    .icon-container {
+    .icon-subtitle {
       display: flex;
       flex-direction: row;
       align-items: center;
       /* justify-content: center; */
       gap: 10px;
 
-      .icon {
+      .ticket-container {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+
+        .ticket {
+          position: absolute;
+          width: 200%;
+          left: -12px;
+          top: -20px;
+          object-fit: contain;
+        }        
+      }
+      .hanger-container {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+
+        .hanger {
+          position: absolute;
+          width: 200%;
+          left: -21px;
+          top: -11px;
+          object-fit: contain;
+        }        
+      }
+
+      .gift-container {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+
+        .gift {
+          position: absolute;
+          width: 200%;
+          left: -18px;
+          top: -4px;
+          object-fit: contain;
+        }        
+      }
+
+      .card-container {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        overflow: hidden;
+
+        .card {
+          position: absolute;
+          width: 200%;
+          left: -13px;
+          top: -9px;
+          object-fit: contain;
+        }        
+      }
+      
+      .cocktail-container {
+        position: relative;
         width: 30px;
         height: 30px;
+        overflow: hidden;
+        .cocktail {
+          position: absolute;
+          top: -30px;
+          left: -24px;
+          width: 300%;
+          height: 300%;
+          object-fit: contain;
+        }
       }
     }
 
@@ -123,6 +202,10 @@
     .gift-link {
       text-decoration: underline;
       color: inherit;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     .flowers {
