@@ -1,4 +1,5 @@
 ---
+const { invited } = Astro.props;
 
 ---
 
@@ -9,7 +10,7 @@
       <div class="ticket-container">
         <img class="ticket" src="ticket.svg" alt="Icon">
       </div>
-      <span class="stylish">1 Persona</span>
+      <span class="stylish">{invited ?? 1} Persona{invited > 1 ? 's' : ''}</span>
     </div>
     <div class="icon-subtitle">
       <div class="hanger-container">
@@ -69,7 +70,6 @@
     .additional-image {
       width: var(--maxWidth);
       max-width: 100%;
-      border: 1px solid gray;
       aspect-ratio: 3 / 2;
       z-index: 2;
     }
